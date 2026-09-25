@@ -13,12 +13,12 @@
 .visual-word em span{color:#fff}
 .visual-word{line-height:1.12}
 .ticker-inner{max-width:none;justify-content:flex-start;gap:0}
-.ticker-group{display:flex;flex:0 0 auto;justify-content:space-between;align-items:center;gap:clamp(28px,6vw,90px);padding:16px 34px;min-width:min(100%,1220px)}
+.ticker-group{display:flex;flex:0 0 auto;justify-content:center;align-items:center;gap:clamp(28px,6vw,90px);padding:16px 34px;min-width:min(100%,1220px)}
 .ticker-inner>.ticker-group + .ticker-group{display:none}
 
 @media(max-width:800px){
   .ticker-inner{width:max-content;animation:ticker-scroll 18s linear infinite}
-  .ticker-group{min-width:100vw;padding-left:30px;padding-right:30px;gap:30px}
+  .ticker-group{min-width:100vw;justify-content:space-between;padding-left:30px;padding-right:30px;gap:30px}
   .ticker-inner>.ticker-group + .ticker-group{display:flex}
 }
 
