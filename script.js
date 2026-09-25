@@ -2,6 +2,10 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
+if (window.location.hash) {
+  history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+}
+
 const scrollToTop = () => {
   window.scrollTo(0, 0);
   requestAnimationFrame(() => window.scrollTo(0, 0));
