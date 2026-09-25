@@ -2,7 +2,14 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
-window.scrollTo(0, 0);
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+  requestAnimationFrame(() => window.scrollTo(0, 0));
+};
+
+scrollToTop();
+window.addEventListener('load', scrollToTop);
+window.addEventListener('pageshow', scrollToTop);
 
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
