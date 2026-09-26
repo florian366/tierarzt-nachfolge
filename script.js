@@ -36,3 +36,10 @@ document.querySelector('#request-form')?.addEventListener('submit', (event) => {
   status.textContent = 'Vielen Dank. Wir melden uns persönlich bei Ihnen.';
   event.target.reset();
 });
+
+document.querySelector('#tip-form')?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const status = event.target.querySelector('.form-status');
+  status.textContent = 'Vielen Dank für Ihren Tipp. Wir melden uns diskret bei Ihnen.';
+  event.target.reset();
+});
