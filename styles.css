@@ -103,5 +103,6 @@
 .dissolution-final .button{margin-bottom:17px}
 .dissolution-final small{display:block}
 .dissolution-page .site-footer{margin-top:0}
+.dissolution-page h1,.dissolution-page h2,.dissolution-page h3,.dissolution-page .dissolution-faq summary{font-weight:500}
 @media(max-width:800px){.dissolution-hero{display:flex;flex-direction:column;align-items:stretch;gap:45px;padding-top:55px;padding-bottom:70px}.dissolution-hero h1{font-size:51px}.dissolution-hero-side{min-height:250px}.dissolution-intro,.dissolution-section{padding-top:85px;padding-bottom:85px}.dissolution-intro-grid,.dissolution-two-col{grid-template-columns:1fr;gap:38px}.dissolution-options{grid-template-columns:1fr;gap:14px}.dissolution-option{min-height:0}.dissolution-process{grid-template-columns:1fr 1fr}.dissolution-faq{grid-template-columns:1fr}.dissolution-faq details:last-child{border-bottom:0}.dissolution-final{padding:80px 0 85px}}
 @media(max-width:420px){.dissolution-hero h1{font-size:44px}.dissolution-hero .hero-lead{font-size:17px}.dissolution-process{grid-template-columns:1fr}.dissolution-callout{padding:35px 25px}.dissolution-zero strong{font-size:72px}}
