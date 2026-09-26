@@ -30,16 +30,15 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
-document.querySelector('#request-form')?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const status = document.querySelector('.form-status');
-  status.textContent = 'Vielen Dank. Wir melden uns persönlich bei Ihnen.';
-  event.target.reset();
-});
+document.querySelectorAll('#request-form, #tip-form').forEach((form) => {
+  form.action = 'https://formspree.io/f/xvkgwveg';
+  form.method = 'POST';
 
-document.querySelector('#tip-form')?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const status = event.target.querySelector('.form-status');
-  status.textContent = 'Vielen Dank für Ihren Tipp. Wir melden uns diskret bei Ihnen.';
-  event.target.reset();
+  const subject = document.createElement('input');
+  subject.type = 'hidden';
+  subject.name = '_subject';
+  subject.value = form.id === 'tip-form'
+    ? 'Neuer Tipp über TierarztNachfolge.de'
+    : 'Neue Anfrage über TierarztNachfolge.de';
+  form.prepend(subject);
 });
