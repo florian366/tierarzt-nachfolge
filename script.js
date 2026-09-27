@@ -31,7 +31,9 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
 });
 
 document.querySelectorAll('#request-form, #tip-form').forEach((form) => {
-  form.action = 'https://formspree.io/f/xvkgwveg';
+  form.action = form.id === 'tip-form'
+    ? 'https://formspree.io/f/xdekpwjo'
+    : 'https://formspree.io/f/xvkgwveg';
   form.method = 'POST';
 
   const subject = document.createElement('input');
