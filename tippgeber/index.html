@@ -48,11 +48,22 @@
           <div class="hero-actions"><a class="button button-dark" href="#tipp">Jetzt Tipp abgeben <span class="button-arrow" aria-hidden="true"></span></a><a class="text-link" href="#ablauf">Mehr erfahren <span>↓</span></a></div>
           <p class="referral-microcopy">Diskret <span>·</span> unverbindlich <span>·</span> kostenlos</p>
         </div>
-        <div class="referral-hero-art" aria-label="1.000 Euro Tippgeberprämie">
-          <div class="referral-sun"></div><div class="referral-circle"></div>
-          <div class="referral-card"><span class="referral-card-label">Tippgeberprämie</span><strong>1.000<span> €</span></strong><p>bei erfolgreicher<br />Vermittlung</p></div>
-          <div class="referral-badge">Diskret<br /><strong>&amp; persönlich</strong></div>
-          <div class="referral-art-label"><span>01</span><span>Ihr Tipp kann<br />viel bewegen.</span></div>
+        <div class="referral-hero-form" id="tipp">
+          <div class="hero-form-prize"><strong>1.000 €</strong><span>Tippgeberprämie bei erfolgreicher Vermittlung</span></div>
+          <div class="section-kicker">Tippgeber-Formular</div>
+          <h2>Sie haben<br /><em>einen Tipp?</em></h2>
+          <p class="hero-form-intro">Erzählen Sie uns kurz, worum es geht. Wir melden uns diskret bei Ihnen.</p>
+          <form id="tip-form">
+            <label>Ihr Name*<input required type="text" name="name" placeholder="Vor- und Nachname" /></label>
+            <label>Ihre E-Mail-Adresse*<input required type="email" name="email" placeholder="ihre@email.de" /></label>
+            <label>Ihre Telefonnummer <span class="optional">optional</span><input type="tel" name="phone" placeholder="Telefonnummer" /></label>
+            <label>Welche Tierarztpraxis kennen Sie?*<input required type="text" name="practice" placeholder="Name der Praxis" /></label>
+            <div class="form-two-col"><label>Ort der Praxis<input type="text" name="location" placeholder="Ort / PLZ" /></label><label>Woher wissen Sie davon? <span class="optional">optional</span><input type="text" name="source" placeholder="Zum Beispiel: Patient" /></label></div>
+            <label>Worum geht es?*<textarea required name="reason" rows="4" placeholder="Erzählen Sie uns kurz, was Sie über die geplante Nachfolge wissen ..."></textarea></label>
+            <p class="form-hint">Wir behandeln Ihre Angaben vertraulich und besprechen die nächsten Schritte mit Ihnen.</p>
+            <button class="button button-dark" type="submit">Tipp unverbindlich abgeben <span class="button-arrow" aria-hidden="true"></span></button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
 
@@ -76,8 +87,6 @@
       <section class="why-section"><div class="section-shell"><div class="section-kicker">04 / Warum TierarztNachfolge.de?</div><div class="why-grid"><article><span>01</span><h3>Diskret</h3><p>Eine geplante Praxisabgabe ist sensibel. Deshalb behandeln wir Hinweise und Anfragen vertraulich.</p></article><article><span>02</span><h3>Provisionsfrei</h3><p>Für die abgebende Tierarztpraxis ist unsere Vermittlung provisionsfrei.</p></article><article><span>03</span><h3>Großes Netzwerk</h3><p>Wir verfügen über ein Netzwerk mit <strong>über 2.000 Kontakten und Tierarztpraxen.</strong></p></article><article><span>04</span><h3>Persönlich</h3><p>Wir prüfen jeden Hinweis individuell und besprechen das weitere Vorgehen mit Ihnen.</p></article></div></div></section>
 
       <section class="prize-section section-shell"><div><div class="section-kicker">05 / Die Tippgeberprämie</div><h2>1.000 € bei <em>erfolgreicher Vermittlung.</em></h2><p>Die Prämie wird fällig, wenn aus Ihrem Tipp tatsächlich eine erfolgreiche Vermittlung einer Nachfolgelösung entsteht.</p><p><strong>Vor einer möglichen Kontaktaufnahme klären wir mit Ihnen den konkreten Ablauf und die Voraussetzungen.</strong></p></div><div class="prize-number"><span>1.000</span><small>€</small><p>Tippgeberprämie<br />bei erfolgreicher Vermittlung</p></div></section>
-
-      <section class="referral-contact" id="tipp"><div class="section-shell referral-contact-grid"><div><div class="section-kicker">06 / Tippgeber-Formular</div><h2>Sie haben<br /><em>einen Tipp?</em></h2><p>Erzählen Sie uns kurz, worum es geht. Wir melden uns anschließend diskret bei Ihnen.</p><div class="contact-note"><span>✦</span><p><strong>100 % unverbindlich</strong><br />Wir behandeln Ihre Angaben vertraulich.</p></div></div><form id="tip-form"><label>Ihr Name*<input required type="text" name="name" placeholder="Vor- und Nachname" /></label><label>Ihre E-Mail-Adresse*<input required type="email" name="email" placeholder="ihre@email.de" /></label><label>Ihre Telefonnummer <span class="optional">optional</span><input type="tel" name="phone" placeholder="Telefonnummer" /></label><label>Welche Tierarztpraxis kennen Sie?*<input required type="text" name="practice" placeholder="Name der Praxis" /></label><div class="form-two-col"><label>Ort der Praxis<input type="text" name="location" placeholder="Ort / PLZ" /></label><label>Woher wissen Sie davon? <span class="optional">optional</span><input type="text" name="source" placeholder="Zum Beispiel: Patient" /></label></div><label>Worum geht es?*<textarea required name="reason" rows="4" placeholder="Erzählen Sie uns kurz, was Sie über die geplante Nachfolge wissen ..."></textarea></label><p class="form-hint">Wir werden uns schnellstmöglich mit Ihnen in Kontakt setzen und die nächsten Schritte besprechen, um gemeinsam den Kontakt zur Praxis herzustellen.</p><button class="button button-dark" type="submit">Tipp unverbindlich abgeben <span class="button-arrow" aria-hidden="true"></span></button><p class="form-status" aria-live="polite"></p></form></div></section>
 
       <section class="reassurance section-shell"><div class="reassurance-icon">✓</div><div><div class="section-kicker">Wichtig</div><h2>Sie müssen den Praxisinhaber <em>nicht selbst kontaktieren.</em></h2><p>Wenn Sie unsicher sind, ob Ihre Information bereits bekannt ist oder wie Sie den Praxisinhaber ansprechen sollen: <strong>Kein Problem.</strong> Geben Sie uns zunächst einfach Ihren Hinweis. Wir prüfen den Kontakt und besprechen anschließend mit Ihnen, wie es weitergehen kann.</p></div></section>
 

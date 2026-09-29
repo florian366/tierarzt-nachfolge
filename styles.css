@@ -146,3 +146,30 @@
 .value-section{padding-top:105px;padding-bottom:105px}.value-muted{background:#e9eee7}.value-two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}.value-callout{background:var(--dark);color:#fff;padding:42px 38px;transform:rotate(1deg)}.value-callout strong{display:block;color:var(--lime);font:500 clamp(31px,3.3vw,48px)/.98 Manrope,sans-serif;letter-spacing:-.07em;margin:35px 0}.value-callout p{color:#d2ddd7;margin:0}.model-list{display:grid;gap:13px}.model-list article{background:#fff;padding:23px 22px;border-left:3px solid var(--lime)}.model-list h3{font:600 21px/1.1 Manrope,sans-serif;letter-spacing:-.05em;margin:15px 0 8px}.model-list p{font-size:14px;line-height:1.55;margin:0}.value-start{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:8px}.numbered-note{padding:25px 28px;background:#fff;border:1px solid var(--line)}.numbered-note p{margin:18px 0 0}.zero-card{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;align-content:center;background:var(--dark);min-height:270px;color:var(--lime)}.zero-card strong{font:500 130px/.8 Manrope,sans-serif;letter-spacing:-.1em}.zero-card span{font-size:42px;font-weight:600;margin:19px 0 0 10px}.zero-card p{width:100%;text-align:center;color:#d2ddd7;margin:23px 0 0}.value-final{background:var(--lime);padding:95px 0 100px;text-align:center}.value-final h2{max-width:750px;margin:15px auto 20px}.value-final p{max-width:620px;margin:0 auto 28px}.value-final .button{margin-bottom:10px}
 @media(max-width:800px){.value-hero{display:flex;flex-direction:column;align-items:stretch;gap:45px;padding-top:55px;padding-bottom:70px}.value-hero h1{font-size:51px}.value-hero-card{min-height:310px}.value-intro,.value-section{padding-top:85px;padding-bottom:85px}.value-intro-grid,.value-two-col,.value-start{grid-template-columns:1fr;gap:38px}.value-factors{padding:85px 0}.factor-grid{grid-template-columns:1fr 1fr}.factor-featured{grid-row:auto}.value-callout{padding:35px 28px}.zero-card{min-height:230px}.value-final{padding:80px 0 85px}}
 @media(max-width:420px){.value-hero h1{font-size:44px}.value-hero .hero-lead{font-size:17px}.factor-grid{grid-template-columns:1fr}.value-callout{padding:35px 25px}.zero-card strong{font-size:105px}.value-final h2{font-size:40px}}
+
+/* Put the referral form beside the opening message so the reward is visible at first glance. */
+.referral-hero{grid-template-columns:minmax(0,.9fr) minmax(390px,1.1fr);align-items:start;min-height:0;padding-top:35px;padding-bottom:80px;gap:55px}
+.referral-hero-copy{padding-top:0}
+.referral-hero-form{background:#fff;border-top:4px solid var(--lime);padding:25px 30px 30px;box-shadow:0 18px 45px rgba(32,37,34,.1)}
+.referral-hero-form h2{font-size:clamp(36px,3.5vw,52px);margin:10px 0 13px}
+.referral-hero-form h2 em{color:#71817a;font-style:normal}
+.hero-form-intro{color:var(--muted);font-size:14px;margin-bottom:20px}
+.hero-form-prize{display:flex;align-items:center;gap:14px;background:var(--dark);color:#fff;padding:14px 17px;margin-bottom:24px}
+.hero-form-prize strong{color:var(--lime);font:500 38px/.9 Manrope,sans-serif;letter-spacing:-.08em;white-space:nowrap}
+.hero-form-prize span{color:#d2ddd7;font-size:12px;line-height:1.3}
+.referral-hero-form form{display:grid;gap:12px}
+.referral-hero-form form label{display:block;font-size:12px;font-weight:600}
+.referral-hero-form input,.referral-hero-form textarea{width:100%;margin-top:4px;padding:10px 11px;border:1px solid var(--line);border-radius:2px;background:#fbfcf8;color:var(--ink);font:400 13px 'DM Sans'}
+.referral-hero-form textarea{resize:vertical;min-height:75px}
+.referral-hero-form input:focus,.referral-hero-form textarea:focus{outline:2px solid var(--lime);outline-offset:1px}
+.referral-hero-form .form-two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.referral-hero-form .form-hint{font-size:11px;color:var(--muted);line-height:1.4;margin:0}
+.referral-hero-form .button{justify-content:center;width:100%;padding:13px 16px}
+
+@media(max-width:800px){
+  .referral-hero{gap:40px;padding-top:35px;padding-bottom:65px}
+  .referral-hero-copy{padding-top:0}
+  .referral-hero-form{padding:22px 21px 25px}
+  .referral-hero-form .form-two-col{grid-template-columns:1fr}
+  .hero-form-prize strong{font-size:34px}
+}
