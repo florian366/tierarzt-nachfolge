@@ -27,6 +27,17 @@
   .ticker-inner>.ticker-group + .ticker-group{display:flex}
 }
 
+.cookie-consent{position:fixed;z-index:20;left:20px;right:20px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:28px;max-width:920px;margin:auto;padding:20px 22px;background:#fff;border:1px solid var(--line);box-shadow:0 15px 45px rgba(32,37,34,.18)}
+.cookie-consent[hidden]{display:none}
+.cookie-consent strong{font:600 18px/1.1 Manrope,sans-serif;letter-spacing:-.04em}
+.cookie-consent p{max-width:650px;margin:7px 0 0;color:var(--muted);font-size:13px;line-height:1.45}
+.cookie-consent a,.cookie-settings-link{color:var(--ink);font-weight:600}
+.cookie-consent-actions{display:flex;flex-shrink:0;align-items:center;gap:10px}
+.cookie-consent-actions button{white-space:nowrap}
+.cookie-reject,.cookie-settings-link{border:0;background:none;padding:10px 4px;cursor:pointer;font:600 13px 'DM Sans'}
+.cookie-settings-link{text-decoration:underline}
+@media(max-width:650px){.cookie-consent{left:12px;right:12px;bottom:12px;display:block;padding:18px}.cookie-consent-actions{justify-content:flex-end;margin-top:14px}.cookie-consent-actions .button{padding:11px 14px}}
+
 @keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50%))}}
 
 /* Keep the network illustration recognizable without competing with the statistic. */
