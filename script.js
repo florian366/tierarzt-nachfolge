@@ -43,6 +43,16 @@ document.querySelectorAll('#request-form, #tip-form').forEach((form) => {
     ? 'Neuer Tipp über TierarztNachfolge.de'
     : 'Neue Anfrage über TierarztNachfolge.de';
   form.prepend(subject);
+
+  if (form.id === 'tip-form') {
+    form.addEventListener('submit', () => {
+      if (typeof window.fbq !== 'function') return;
+      window.fbq('track', 'Lead', {
+        value: 10.000,
+        currency: '€',
+      });
+    });
+  }
 });
 
 const consentKey = 'tn_cookie_consent';
