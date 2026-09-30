@@ -45,12 +45,15 @@ document.querySelectorAll('#request-form, #tip-form').forEach((form) => {
   form.prepend(subject);
 
   if (form.id === 'tip-form') {
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', (event) => {
       if (typeof window.fbq !== 'function') return;
+      event.preventDefault();
       window.fbq('track', 'Lead', {
         value: 10.000,
-        currency: '€',
+        currency: 'EUR',
       });
+      // Give the Pixel request a moment before Formspree navigates away.
+      window.setTimeout(() => form.submit(), 300);
     });
   }
 });
