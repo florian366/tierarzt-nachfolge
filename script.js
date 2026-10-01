@@ -17,17 +17,33 @@ window.addEventListener('pageshow', scrollToTop);
 
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
+const navDropdown = document.querySelector('.nav-dropdown');
+const navDropdownToggle = document.querySelector('.nav-dropdown-toggle');
 
 menuToggle?.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
+navDropdownToggle?.addEventListener('click', () => {
+  const isOpen = navDropdown.classList.toggle('open');
+  navDropdownToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
 document.querySelectorAll('.main-nav a').forEach((link) => {
   link.addEventListener('click', () => {
     nav.classList.remove('open');
     menuToggle?.setAttribute('aria-expanded', 'false');
+    navDropdown?.classList.remove('open');
+    navDropdownToggle?.setAttribute('aria-expanded', 'false');
   });
+});
+
+document.addEventListener('click', (event) => {
+  if (navDropdown && !navDropdown.contains(event.target)) {
+    navDropdown.classList.remove('open');
+    navDropdownToggle?.setAttribute('aria-expanded', 'false');
+  }
 });
 
 document.querySelectorAll('#request-form, #tip-form').forEach((form) => {
