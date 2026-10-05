@@ -83,6 +83,22 @@
 @media(max-width:800px){.referral-hero{display:flex;flex-direction:column;align-items:stretch;padding-top:55px;padding-bottom:70px}.referral-hero h1{font-size:51px}.referral-hero-art{height:390px;margin-top:35px}.referral-sun{width:175px;height:175px;right:8%;top:7%}.referral-circle{width:300px;height:300px;right:0;top:15%}.referral-card{right:13%;top:19%;width:220px;height:250px;padding:25px 23px}.referral-card strong{font-size:56px;margin-top:24px}.referral-badge{left:0;bottom:9%}.referral-art-label{right:0;bottom:1%}.referral-intro,.referral-benefits,.prize-section{padding-top:90px;padding-bottom:90px}.referral-intro-grid,.referral-benefits,.prize-section,.referral-contact-grid{grid-template-columns:1fr;gap:45px}.referral-intro h2,.referral-benefits h2,.prize-section h2{font-size:43px}.referral-steps-section{padding:90px 0}.referral-steps-section .section-heading{display:block;margin-bottom:38px}.referral-steps-section .section-heading p{margin-top:24px}.referral-steps-grid{grid-template-columns:1fr;gap:16px}.referral-step{min-height:0;padding:23px 20px}.referral-step h3{margin:16px 0 10px}.referral-benefits{gap:50px}.benefit-statement{padding:55px 40px}.why-section{padding:90px 0}.why-grid{grid-template-columns:1fr 1fr;gap:28px 18px;margin-top:40px}.why-grid h3{font-size:19px;margin-top:20px}.prize-number{width:260px;height:260px;padding-top:70px}.prize-number span{font-size:58px}.referral-contact{padding:90px 0}.referral-contact form{padding:27px 21px}.form-two-col,.faq-grid{grid-template-columns:1fr}.reassurance{grid-template-columns:1fr;gap:22px;padding-top:80px;padding-bottom:80px}.faq-section{padding-top:85px;padding-bottom:90px}.faq-section h2{margin-bottom:35px}.referral-final{padding:85px 0 90px}.referral-final h2{font-size:45px}.referral-disclaimer{padding-left:21px;padding-right:21px}}
 @media(max-width:420px){.referral-hero h1{font-size:45px}.referral-hero-art{height:350px}.referral-card{right:8%;width:205px}.referral-card strong{font-size:51px}.referral-badge{transform:rotate(-5deg) scale(.9);transform-origin:left bottom}.referral-intro h2,.referral-benefits h2,.prize-section h2{font-size:39px}.why-grid{grid-template-columns:1fr}.referral-final h2{font-size:40px}}
 
+/* Hero video facade keeps the thumbnail visible until the visitor starts the video. */
+.hero-video{position:absolute;z-index:1;top:12%;right:11%;width:min(78%,430px);aspect-ratio:16 / 9;overflow:hidden;background:var(--dark);box-shadow:18px 20px 0 rgba(32,37,34,.08)}
+.hero-video img,.hero-video iframe{display:block;width:100%;height:100%;border:0;object-fit:cover}
+.hero-video:after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(39,48,44,.05),rgba(39,48,44,.3));pointer-events:none}
+.video-play{position:absolute;z-index:2;inset:50% auto auto 50%;width:58px;height:58px;padding:0;border:1px solid rgba(255,255,255,.75);border-radius:50%;background:rgba(32,37,34,.42);color:#fff;transform:translate(-50%,-50%);cursor:pointer;display:grid;place-items:center;transition:background .2s ease,transform .2s ease}
+.video-play span{display:block;margin-left:3px;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:12px solid #fff}
+.video-play:hover{background:rgba(32,37,34,.7);transform:translate(-50%,-50%) scale(1.05)}
+.hero-video.is-playing:after{display:none}
+.card-video{right:1%;bottom:4%;z-index:3;padding:15px 18px;background:#fff;box-shadow:0 12px 30px rgba(32,37,34,.12);transform:rotate(-4deg);font-size:12px}
+.card-video p{margin:0;line-height:1.35}.card-video strong{font-size:14px}.video-card-mark{display:block;margin-bottom:8px;color:#8aa814;font-size:16px}
+
+@media(max-width:800px){
+  .hero-video{top:10%;right:4%;width:92%;aspect-ratio:16 / 9}
+  .card-video{right:0;bottom:4%;transform:rotate(-3deg) scale(.9);transform-origin:right bottom}
+}
+
 /* Praxisauflösung page */
 .dissolution-page{background:var(--paper)}
 .dissolution-hero{padding-top:78px;padding-bottom:92px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:70px;align-items:end}
