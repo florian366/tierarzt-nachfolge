@@ -84,15 +84,13 @@
 @media(max-width:420px){.referral-hero h1{font-size:45px}.referral-hero-art{height:350px}.referral-card{right:8%;width:205px}.referral-card strong{font-size:51px}.referral-badge{transform:rotate(-5deg) scale(.9);transform-origin:left bottom}.referral-intro h2,.referral-benefits h2,.prize-section h2{font-size:39px}.why-grid{grid-template-columns:1fr}.referral-final h2{font-size:40px}}
 
 /* Hero video facade keeps the thumbnail visible until the visitor starts the video. */
-.hero-video{position:absolute;z-index:1;top:18%;right:11%;width:min(78%,430px);aspect-ratio:16 / 9;overflow:hidden;background:var(--dark);box-shadow:18px 20px 0 rgba(32,37,34,.08);cursor:pointer}
-.hero-video img,.hero-video iframe{display:block;width:100%;height:100%;border:0;object-fit:cover}
-.hero-video:after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(39,48,44,.05),rgba(39,48,44,.3));pointer-events:none}
-.hero-video.is-playing:after{display:none}
+.hero-video{position:absolute;z-index:1;top:18%;right:3%;width:min(92%,560px);aspect-ratio:1;overflow:hidden;background:transparent;box-shadow:none;cursor:pointer}
+.hero-video img,.hero-video iframe{display:block;width:100%;height:100%;border:0;object-fit:contain}
 .card-video{right:1%;bottom:4%;z-index:3;padding:15px 18px;background:#fff;box-shadow:0 12px 30px rgba(32,37,34,.12);transform:rotate(-4deg);font-size:12px}
 .card-video p{margin:0;line-height:1.35}.card-video strong{font-size:14px}.video-card-mark{display:block;margin-bottom:8px;color:#8aa814;font-size:16px}
 
 @media(max-width:800px){
-  .hero-video{top:14%;right:4%;width:92%;aspect-ratio:16 / 9}
+  .hero-video{top:14%;right:0;width:100%;aspect-ratio:1}
   .card-video{right:0;bottom:4%;transform:rotate(-3deg) scale(.9);transform-origin:right bottom}
 }
 
