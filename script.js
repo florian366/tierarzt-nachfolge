@@ -47,7 +47,7 @@ document.addEventListener('click', (event) => {
 });
 
 document.querySelectorAll('.hero-video').forEach((video) => {
-  video.querySelector('.video-play')?.addEventListener('click', () => {
+  const loadVideo = () => {
     const videoId = video.dataset.videoId;
     const frame = document.createElement('iframe');
     frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
@@ -56,6 +56,17 @@ document.querySelectorAll('.hero-video').forEach((video) => {
     frame.allowFullscreen = true;
     video.replaceChildren(frame);
     video.classList.add('is-playing');
+    video.removeAttribute('role');
+    video.removeAttribute('tabindex');
+    video.removeAttribute('aria-label');
+  };
+
+  video.addEventListener('click', loadVideo);
+  video.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      loadVideo();
+    }
   });
 });
 
