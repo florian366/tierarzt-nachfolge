@@ -95,6 +95,21 @@
   .card-video{right:0;bottom:4%;transform:rotate(-3deg) scale(.9);transform-origin:right bottom}
 }
 
+/* The referral video stays below the form so the opening action remains clear. */
+.referral-video-section{display:grid;grid-template-columns:minmax(0,.8fr) minmax(360px,1.2fr);align-items:center;gap:70px;padding-top:75px;padding-bottom:90px}
+.referral-video-copy h2{max-width:500px;font-size:clamp(38px,4.2vw,58px);margin:16px 0 24px}
+.referral-video-copy h2 em{font-style:normal;color:#71817a}
+.referral-video-copy p{max-width:450px;color:var(--muted);line-height:1.7}
+.referral-video{position:relative;top:auto;right:auto;width:100%;aspect-ratio:1;transform:none}
+
+@media(max-width:800px){
+  .referral-video-section{grid-template-columns:1fr;gap:25px;padding-top:70px;padding-bottom:75px}
+  .referral-video-copy h2{font-size:43px;margin-bottom:18px}
+  .referral-video{width:min(100%,520px);justify-self:center}
+}
+
+@media(max-width:420px){.referral-video-copy h2{font-size:39px}}
+
 /* Praxisauflösung page */
 .dissolution-page{background:var(--paper)}
 .dissolution-hero{padding-top:78px;padding-bottom:92px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:70px;align-items:end}

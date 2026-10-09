@@ -51,7 +51,7 @@ document.querySelectorAll('.hero-video').forEach((video) => {
     const videoId = video.dataset.videoId;
     const frame = document.createElement('iframe');
     frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
-    frame.title = 'Video zum gesamten Ablauf der Praxisnachfolge';
+    frame.title = video.dataset.videoTitle || 'Video zum gesamten Ablauf der Praxisnachfolge';
     frame.allow = 'autoplay; encrypted-media; picture-in-picture';
     frame.allowFullscreen = true;
     video.replaceChildren(frame);
